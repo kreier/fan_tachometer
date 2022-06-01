@@ -13,7 +13,9 @@ A photoresistor has a latency of around 10 ms (according to [eepower.com](https:
 
 ## Software
 
-Written in Circuitpython and the analog value connected to pin A0:
+Written in Circuitpython and the analog value connected to pin A0. The plotter output looks like the following picture with a constantly adjusted orange lower limit, purple upper limit, blue meausred raw brightness and green floating averages:
+
+![Plotter on Mu](docs/plotter_mu_output_slower.png)
 
 ``` py
 # light resistor on A0 for optical tachometer
