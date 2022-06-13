@@ -7,9 +7,11 @@ We use a photoresistor board and take the analog output as input for a STM32F411
 
 ### Limitations
 
-A photoresistor has a latency of around 10 ms (according to [eepower.com](https://eepower.com/resistor-guide/resistor-types/photo-resistor/#) and [wikipedia](https://en.wikipedia.org/wiki/Photoresistor). So the maximum measureable frequency should be around 10 Hz or 6000 rpm. The ADC needs 1ms to sample a 12 bit signal. The setup:
+A photoresistor has a latency of around 10 ms (according to [eepower.com](https://eepower.com/resistor-guide/resistor-types/photo-resistor/#) and [wikipedia](https://en.wikipedia.org/wiki/Photoresistor). So the maximum measureable frequency should be around 10 Hz or 6000 rpm. The ADC needs 1ms to sample a 12 bit signal.
 
-(picture)
+With 8 segments we had to divide the raw fps value by 8 for the rpm value - and multiply by 60 to get the rotations per minute. Here a spun up centrifuge to over 2000 rpm:
+
+![centrifuge measurement](docs/centrifuge.png)
 
 ## Software
 
